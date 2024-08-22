@@ -5,10 +5,10 @@ CC = gcc
 CFLAGS = -Wall -g -Wno-unused-variable
 
 # Tên của file thực thi
-TARGET = 005_struct/005_5
+TARGET = 006_dynamicMemoryAllocation/006_3
 
 # Định nghĩa các file nguồn và file đối tượng
-SRCS = 005_struct/005_5.c
+SRCS = 006_dynamicMemoryAllocation/006_3.c
 OBJS = $(SRCS:.c=.o)
 
 # Quy tắc mặc định để build chương trình
