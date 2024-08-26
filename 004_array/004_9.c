@@ -17,7 +17,7 @@ void printValuesFrequency(int *arr, int size){
             }
         }
         if(leftFlag == 1){
-            continue; //new iteration with new i
+            continue; //new iteration with new i, when leftFlag == 1, the rest code will be skipped
         }
 
         // Right Part ..

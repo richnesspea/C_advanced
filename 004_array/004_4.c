@@ -1,3 +1,4 @@
+//Find the min and max of an array
 #include <stdio.h>
 
 #define SIZE 3

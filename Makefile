@@ -5,10 +5,10 @@ CC = gcc
 CFLAGS = -Wall -g -Wno-unused-variable
 
 # Tên của file thực thi
-TARGET = 007/007_2
+TARGET = 004_array/004_9
 
 # Định nghĩa các file nguồn và file đối tượng
-SRCS = 007/007_2.c
+SRCS = 004_array/004_9.c
 OBJS = $(SRCS:.c=.o)
 
 # Quy tắc mặc định để build chương trình
@@ -29,3 +29,7 @@ clean:
 # Quy tắc để chạy chương trình
 run: $(TARGET)
 	./$(TARGET)
+
+# Quy tắc để debug chương trình
+debug: $(TARGET)
+	gdb $(TARGET)
