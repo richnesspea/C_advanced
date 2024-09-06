@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-
 //Static array of structs
 
 typedef struct {

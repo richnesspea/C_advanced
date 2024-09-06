@@ -5,10 +5,10 @@ CC = gcc
 CFLAGS = -Wall -g -Wno-unused-variable
 
 # Tên của file thực thi
-TARGET = 004_array/004_9
+TARGET = 005_struct/005_8
 
 # Định nghĩa các file nguồn và file đối tượng
-SRCS = 004_array/004_9.c
+SRCS = 005_struct/005_8.c
 OBJS = $(SRCS:.c=.o)
 
 # Quy tắc mặc định để build chương trình
