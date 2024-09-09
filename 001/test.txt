@@ -1,0 +1,22 @@
+This is the first line when i use VIM as IDE or text editor
+1. :q 		to quit the file you are editting
+2. :q!		to quit the file when the file contains contents
+
+3. i		change from normal mode to insert mode
+   a		same as command 'i', but after the character that cursor points to 
+   o		insert mode and new line code
+   I		jump to the beginning of this line
+   A		jump to the end of this line
+   O		create new line above the 
+
+5. :w		to save changes into file
+6. :wq
+7. :wq!
+8. number + keyup/keydown/keyleft/keyright
+
+
+
+9. u				undo
+10. Ctrl + R		redo
+
+

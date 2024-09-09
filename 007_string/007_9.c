@@ -1,4 +1,4 @@
-//Finding duplicates in string using Hashtable or using Bits
+//Finding duplicates in string using Hashtable 
 
 #include <stdio.h>
 #include <string.h>

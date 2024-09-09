@@ -10,6 +10,7 @@ Các kiến thức ôn tập gồm:
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define TABLE_SIZE 100
 
@@ -27,7 +28,17 @@ unsigned int hash(int id){
 }
 
 void insert(int id, char *name, char *address){
+    unsigned int index = hash(id);
+    Record* newRecord = (Record*)malloc(sizeof(Record));
+    
+    //gán giá trị cho các trường của bản ghi
+    newRecord->id = id;
+    strcpy(newRecord->name, name);
+    strcpy(newRecord->address, address);
 
+    //Bản ghi mới được chèn vào đầu danh sách liên kết tại vị trí index trong bảng băm.
+    newRecord->next = hashTable[index];
+    hashTable[index] = newRecord;
 }
 
 int main(){
