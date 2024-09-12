@@ -8,8 +8,14 @@ void intToBinaryString(int number, char* binaryStr) {
     // Số lượng bit cần để biểu diễn số nguyên
     int numBits = sizeof(int) * 8;
     for (int i = numBits - 1; i >= 0; i--) {
-        int bit = (number >> i) & 1;  // Sửa từ & i thành & 1
-        binaryStr[index++] = bit ? '1' : '0';
+        int bit = (number >> i) & 1; 
+        //binaryStr[index++] = bit ? '1' : '0';
+        if (bit) {
+            binaryStr[index] = '1';
+        } else {
+            binaryStr[index] = '0';
+        }
+        index++;
     }
     binaryStr[index] = '\0';  // Kết thúc chuỗi
 }
