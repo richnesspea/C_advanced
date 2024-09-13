@@ -75,3 +75,21 @@ int main() {
     studentList_deinit(&list);
     return 0;
 }
+
+/*
+Sự khác biệt giữa self->students[self->size].name và self->students.name:
+self->students: Đây là một con trỏ đến mảng Student. Trong cấu trúc StudentList, students là một con trỏ kiểu Student*, có nghĩa là nó trỏ đến một vùng nhớ chứa nhiều đối tượng Student.
+
+self->students[self->size]: Đây là cách truy cập đến một phần tử cụ thể trong mảng students. Cụ thể, self->students[self->size] truy cập đối tượng Student tại chỉ số self->size trong mảng students.
+
+self->students[self->size].name: Đây là cách truy cập trường name của đối tượng Student tại chỉ số self->size trong mảng students.
+
+Giải thích:
+self->students chỉ là con trỏ đến mảng Student, nó không chứa trường name. Để truy cập trường name, bạn phải xác định phần tử cụ thể trong mảng, đó là self->students[self->size].
+
+self->students[self->size] cho bạn đối tượng Student tại chỉ số self->size. Khi bạn đã có đối tượng Student, bạn có thể truy cập trường name của nó qua cú pháp self->students[self->size].name.
+
+self->students.name không hợp lệ vì self->students là một con trỏ đến mảng các đối tượng Student, không phải là một đối tượng Student cụ thể. Bạn không thể truy cập trực tiếp trường name từ con trỏ mảng mà không chỉ định phần tử cụ thể trong mảng.
+
+
+*/
