@@ -4,7 +4,6 @@
 //Bubble sort algorithm
 //2 1 3 5 4 
 //1 2 3 5 4
-//1 2 3 5 4
 //1 2 3 4 5
 void bubbleSortAlgorithm(int *arr, int size){
     for (int i = 0; i < size - 1; i++){
