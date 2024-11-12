@@ -23,6 +23,7 @@ void printArray(int *arr, int size){
 }
 
 
+
 int main(){
     int nums[] = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
     int result = removeDuplicates(nums, sizeof(nums)/4);
