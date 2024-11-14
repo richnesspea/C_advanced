@@ -22,8 +22,11 @@
 
 
 
+//https://viblo.asia/p/trie-tree-phan-1-xu-ly-xau-ki-tu-5pPLk96n4RZ: trie tree
+//https://wiki.vnoi.info/translate/wcipeg/tree: tree 
 
 char* longestCommonPrefix(char** strs, int strsSize) {
+    //strs is a pointer to a pointer of a char
     if(strsSize == 0){
         return "";
     }
@@ -38,7 +41,7 @@ char* longestCommonPrefix(char** strs, int strsSize) {
     }
     
     //Initialize the result with the first string in the array
-    strcpy(result, strs[0]);
+    strcpy(result, strs[0]);//char * strcpy ( char * destination, const char * source ); -> strcpy returns a pointer to the destination string
 
     for(int i = 0; i < strsSize; i++){
         int j = 0;
@@ -68,8 +71,9 @@ void displayStrings(char* strs[], int size){
 
 
 int main(){
-    char* strs1[] = {"flower", "flow", "flight", "fly"};
-    int size1 = sizeof(strs1)/sizeof(strs1[0]); //4 = 32/8
+    char* strs1[] = {"flower", "flow", "flight", "fly"}; //strs1[] can be considered a 2-D array
+    //char* strs1[] is an array of char*, which means each char* points to a different string
+    int size1 = sizeof(strs1)/sizeof(strs1[0]); //4 = 32/8, 1 char accounts for 8 bytes in 64-bit based systems.
     char* result;
     
     result = longestCommonPrefix(strs1, size1);
