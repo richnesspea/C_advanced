@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-
 // Define an enum
 enum Day {   // Enum representing the days of the week
     Sunday = 1,
