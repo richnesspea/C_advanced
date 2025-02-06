@@ -13,6 +13,7 @@ typedef enum {
 
 int main() {
     Weekday day = 100;
+    printf("%zu \n", sizeof(day));
 
     switch (day) {
     case MONDAY:
