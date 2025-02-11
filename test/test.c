@@ -1,10 +1,6 @@
-#include "test.h"
-#include <stddef.h>
-#include "stdint.h"
+#include <stdio.h>
 int main(){
-    uint8_t buf[4] = {0, 1, 2, 3};
-    printf("size of buf[0]: %zu \n", sizeof(buf[0]));
-
-    uint8_t *ptr = NULL;
+    int i = 5;
+    printf("%d %d %d\n", i, i, i);
 
 }
