@@ -13,7 +13,7 @@ public:
     wstring description;
 
     bool operator<(const MyClass& other) const {
-        return num < other.num; // Compare based on num value
+        return num < other.num; 
     }
 
 };
