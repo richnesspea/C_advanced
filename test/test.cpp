@@ -1,27 +1,28 @@
 #include <iostream>
 
-class Car {
-private:
-    std::string model;
-    int speed;
-
+class Media {
 public:
-    Car(std::string m, int s) : model(m), speed(s) {}
+    virtual void play(){
+        std::cout << "This is media ...\n";
+    }; // Pure virtual function
+    virtual ~Media() { std::cout << "Media destroyed\n"; } // Virtual destructor
+};
 
-    void accelerate(int increase) {
-        this->speed += increase;  // this có kiểu Car*
+class Audio : public Media {
+public:
+    void play() override {
+        std::cout << "Playing audio...\n";
     }
 
-    void display() const {  // Hàm const, this có kiểu const Car*
-        std::cout << "Model: " << this->model << ", Speed: " << this->speed << " km/h\n";
-    }
+    ~Audio() { std::cout << "Audio destroyed\n"; }
 };
 
 int main() {
-    Car car1("BMW", 70); // car1 là hằng số
+    Media* media = new Audio; // Dynamically allocating derived class object
 
-    car1.accelerate(10); // Lỗi: Không thể gọi hàm không const trên đối tượng const
-    car1.display(); // Hợp lệ vì display() là hàm const
+    media->play(); // Calls overridden function in Audio class
+
+    delete media; // Deleting object, ensures derived destructor is called
 
     return 0;
 }
