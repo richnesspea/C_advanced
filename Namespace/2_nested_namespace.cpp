@@ -12,7 +12,7 @@ namespace OuterNamespace{
     }
 }
 
-
+//using namespace OuterNamespace::InnerNamespace;
 namespace NamespaceAliasing = OuterNamespace::InnerNamespace;
 
 int main(){
