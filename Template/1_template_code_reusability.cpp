@@ -1,5 +1,5 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
+using namespace std;
 // 1. Function Overloading (Less Reusable, More Code)
 void print(int x) {
     std::cout << "Integer: " << x << std::endl;
@@ -36,5 +36,5 @@ int main(){
     int a = 10, b = 20;
     int result = minimum<int>(a,b);
     std::cout << "The result of template Minimum is: " << result << std::endl;
-
+    vector<int> vt;
 }

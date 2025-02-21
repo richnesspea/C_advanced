@@ -1,7 +1,6 @@
 #include "6_unnamedNS_myheader.h"
 
-
-//extern int counter; -> cause errors
+extern int counter; //-> cause errors
 //class derived : public Helper {}; -> cause errors
 
 extern int global_counter;
@@ -11,5 +10,6 @@ int main() {
     Printer myPrinter;
     myPrinter.print(); // Calls the method from the linked file
     global_counter++;
+    counter++;
     return 0;
 }

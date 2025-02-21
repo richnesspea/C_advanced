@@ -17,6 +17,6 @@ using namespace first_place;
 
 int main(){
     func1();
-    second_place::func1();
+    //second_place::func1();
     return 0;
 }

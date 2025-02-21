@@ -1,6 +1,7 @@
 #include <iostream>
 #include "6_unnamedNS_myheader.h"
 int global_counter = 0;
+
 namespace {
     int counter = 10;  // This variable is only visible in file1.cpp
 

@@ -1,6 +1,13 @@
 #include <iostream>
 
 namespace MyLibrary {
+    
+    // inline namespace v3 {  // This is the default version
+    //     void show() {
+    //         std::cout << "This is version 3" << std::endl;
+    //     }
+    // }
+
     inline namespace v2 {  // This is the default version
         void show() {
             std::cout << "This is version 2" << std::endl;
