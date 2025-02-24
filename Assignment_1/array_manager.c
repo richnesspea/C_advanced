@@ -3,8 +3,7 @@
 #include <stdlib.h>
 
 static int *array = NULL;
-static int size = 0;
-static int capacity = 0;
+static int size = 0; //the number of elements currently stored in the array
 
 void create_array(int new_size) {
     if (new_size <= 0) {
@@ -18,8 +17,7 @@ void create_array(int new_size) {
         return;
     }
     size = new_size;
-    capacity = new_size;
-    printf("Da tao mang voi dung luong %d phan tu.\n", capacity);
+    printf("Da tao mang voi dung luong %d phan tu.\n", size);
     for (int i = 0; i < size; i++) {
         printf("Phan tu [%d]: ", i);
         scanf("%d", &array[i]);
@@ -38,10 +36,12 @@ void print_array() {
 }
 
 bool insert_element(int value, int position) {
-    if (position < 0 || position > size || size >= capacity) {
+    if (position < 0 || position > size) {
+        printf("position: %d, size: %d\n", position, size);
         printf("Vi tri khong hop le hoac mang day\n");
         return false;
     }
+    //tinh tien cac gia tri tu position sang ben phai 1 don vi
     for (int i = size; i > position; i--) {
         array[i] = array[i - 1];
     }
@@ -62,6 +62,7 @@ bool delete_element(int position) {
     return true;
 }
 
+//Selection Sort works by repeatedly finding the smallest (or largest) element and placing it in its correct position.
 void sort_array(bool ascending) {
     for (int i = 0; i < size - 1; i++) {
         for (int j = i + 1; j < size; j++) {
@@ -87,6 +88,5 @@ void clear_array() {
     free(array);
     array = NULL;
     size = 0;
-    capacity = 0;
-    printf("MMang da bi xoa\n");
+    printf("Mang da bi xoa\n");
 }

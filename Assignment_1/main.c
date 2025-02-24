@@ -21,8 +21,10 @@ int main() {
                 print_array();
                 break;
             case 'i':
-                printf("Nhap gia tri va vi tri: ");
-                scanf("%d %d", &value, &position);
+                printf("Nhap vi tri can them: ");
+                scanf("%d", &position);
+                printf("Nhap gia tri can them: ");
+                scanf("%d", &value);
                 insert_element(value, position);
                 break;
             case 'd':

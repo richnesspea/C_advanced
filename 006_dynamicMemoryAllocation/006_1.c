@@ -29,6 +29,7 @@ int main(){
     int arraySize2;
     arraySize2 = 2;
     b = (double *)malloc(sizeof(double) * arraySize2);
+    printf("Address of allocated memory for b: %p\n", (void*)b);
     if(b != NULL){
         printf("Allocation succedded\n");
     }
