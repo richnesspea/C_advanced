@@ -1,15 +1,25 @@
 #include <iostream>
-using namespace std;
-template <class T>
-void MySwap(T& a, T& b) {
-    T c(a); // Copy a to temporary variable c
-    a = b;  // Assign b to a
-    b = c;  // Assign c (original a) to b
-}
+
+union Data {
+    int i;
+    float f;
+    char c;
+};
+
+Data data_global;
+
 
 int main() {
-    int x = 10;
-    double y = 25.5;
-    //MySwap(x, y);  // cause errors
-    cout << x << " " << y << endl;
+    Data data;
+    
+    data.i = 10; 
+    std::cout << "Integer: " << data.i << std::endl;
+
+    data.f = 5.5; 
+    std::cout << "Float: " << data.f << std::endl; // Overwrites `i`
+
+    data.c = 'A'; 
+    std::cout << "Char: " << data.c << std::endl; // Overwrites `f`
+
+    return 0;
 }
