@@ -14,9 +14,6 @@ void InitArray(LinkedList *list)
 }
 
 // Add an element to the linked list (using available array space)
-// Add value to the static array
-// The new node points to that value
-// Add new node to linked lists
 bool AddElement(LinkedList *list, int value)
 {
     if (list->size >= MAX)
@@ -25,10 +22,8 @@ bool AddElement(LinkedList *list, int value)
         return false;
     }
 
-    // Assign the value to an available position in the static array
     Array[list->size] = value;
 
-    // Create a new node pointing to that array element
     Node *newNode = (Node *)malloc(sizeof(Node));
     if (!newNode)
     {
@@ -38,51 +33,6 @@ bool AddElement(LinkedList *list, int value)
     newNode->data = &Array[list->size];
     newNode->next = NULL;
 
-    // Insert node into the linked list
-    if (list->head == NULL)
-    {
-        list->head = newNode;
-    }
-    else
-    {
-        Node *temp = list->head;
-        while (temp->next != NULL)
-        {
-            temp = temp->next;
-        }
-        temp->next = newNode;
-    }
-
-    list->size++;
-    return true;
-}
-
-// Add an element to the linked list (using available array space)
-    // Add value to the static array
-    // The new node points to that value
-    // Add new node to linked lists
-bool AddElement(LinkedList *list, int value)
-{
-    if (list->size >= MAX)
-    {
-        printf("Array is full! Cannot add more elements.\n");
-        return false;
-    }
-
-    // Assign the value to an available position in the static array
-    Array[list->size] = value;
-
-    // Create a new node pointing to that array element
-    Node *newNode = (Node *)malloc(sizeof(Node));
-    if (!newNode)
-    {
-        printf("Memory allocation failed!\n");
-        return false;
-    }
-    newNode->data = &Array[list->size];
-    newNode->next = NULL;
-
-    // Insert node into the linked list
     if (list->head == NULL)
     {
         list->head = newNode;
@@ -102,8 +52,10 @@ bool AddElement(LinkedList *list, int value)
 }
 
 // Delete an element from the linked list
-bool DelElement(LinkedList *list, int value) {
-    if (list->head == NULL) {
+bool DelElement(LinkedList *list, int value)
+{
+    if (list->head == NULL)
+    {
         printf("List is empty!\n");
         return false;
     }
@@ -111,30 +63,73 @@ bool DelElement(LinkedList *list, int value) {
     Node *temp = list->head;
     Node *prev = NULL;
 
-    // If head node itself holds the value
-    if (*(temp->data) == value) {
+    if (*(temp->data) == value)
+    {
         list->head = temp->next;
         free(temp);
         list->size--;
         return true;
     }
 
-    // Search for the node to be deleted
-    while (temp != NULL && *(temp->data) != value) {
+    while (temp != NULL && *(temp->data) != value)
+    {
         prev = temp;
         temp = temp->next;
     }
 
-    // If value was not found
-    if (temp == NULL) {
+    if (temp == NULL)
+    {
         printf("Element not found!\n");
         return false;
     }
 
-    // Unlink the node
     prev->next = temp->next;
     free(temp);
     list->size--;
     return true;
 }
 
+// Sort array and update linked list accordingly
+void Sort(LinkedList *list)
+{
+    if (list->size <= 1)
+        return;
+    
+    for (int i = 0; i < list->size - 1; i++)
+    {
+        for (int j = 0; j < list->size - i - 1; j++)
+        {
+            if (Array[j] > Array[j + 1])
+            {
+                int temp = Array[j];
+                Array[j] = Array[j + 1];
+                Array[j + 1] = temp;
+            }
+        }
+    }
+    
+    // Update linked list pointers
+    Node *temp = list->head;
+    for (int i = 0; i < list->size; i++)
+    {
+        temp->data = &Array[i];
+        temp = temp->next;
+    }
+}
+
+// Search for an element in the linked list
+int Search(LinkedList *list, int value)
+{
+    Node *temp = list->head;
+    int index = 0;
+    while (temp != NULL)
+    {
+        if (*(temp->data) == value)
+        {
+            return index;
+        }
+        temp = temp->next;
+        index++;
+    }
+    return -1; // Element not found
+}

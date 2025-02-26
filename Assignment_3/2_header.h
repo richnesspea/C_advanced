@@ -20,4 +20,10 @@ typedef struct {
 void InitArray(LinkedList *list);
 
 bool AddElement(LinkedList *list, int value);
+bool DelElement(LinkedList *list, int value);
+void Sort(LinkedList *list);
+int Search(LinkedList *list, int value);
+
+
+
 
