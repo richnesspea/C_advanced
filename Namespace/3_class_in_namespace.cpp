@@ -13,7 +13,7 @@ namespace first_place{
 }
 
 
-class first_place::Class2{////Class2 is defined outside namespace 
+class first_place::Class2{//Class2 is defined outside namespace 
 public:
     Class2(){
         cout << "This is Class2 from first_place" << endl;

@@ -20,7 +20,7 @@
                 }
             ],
             "miDebuggerPath": "/usr/bin/gdb",
-            "preLaunchTask": "gcc build active file (Linux)",
+            "preLaunchTask": "g++ build active file (Linux)",  // Change here
             "internalConsoleOptions": "openOnSessionStart",
             "logging": {
                 "moduleLoad": false,
@@ -47,7 +47,7 @@
                 }
             ],
             "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
-            "preLaunchTask": "gcc build active file (Windows)",
+            "preLaunchTask": "g++ build active file (Windows)", // Change here
             "internalConsoleOptions": "openOnSessionStart",
             "logging": {
                 "moduleLoad": false,
