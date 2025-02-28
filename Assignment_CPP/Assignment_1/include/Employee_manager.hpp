@@ -1,10 +1,17 @@
+#ifndef __EMPLOYEE_MANAGER_H__
+#define __EMPLOYEE_MANAGER_H__
+
+
 #include "Employee.hpp"
-#include <vector>
+#include "Clerk.hpp"
+#include "Engineer.hpp"
+#include "Worker.hpp"
+
 class Employee_manager : public Employee{
 private:
 
 public:
-    void Add_Employee(std::vector<Employee*>& vec);
+    static void Add_Employee(std::vector<Employee*>& vec);
     void Sort_By_Name(const std::string &name);
     void Print_Employees();
     void Exit_program();
@@ -12,4 +19,6 @@ public:
 
 };
 
-void Employee_Manager(void);
+#endif
+
+

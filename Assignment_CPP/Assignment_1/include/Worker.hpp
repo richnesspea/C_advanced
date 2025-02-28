@@ -21,15 +21,21 @@ private:
     Worker_Level level;
 public:
     // Constructor
-    Worker(const std::string& name, uint8_t age, Gender gender, Worker_Level level) : Employee(name, age, gender){
+    Worker(const std::string& name = "DefaultName", uint8_t age = 17, Gender gender = Gender::Others, Worker_Level level = Worker_Level::Level1) : Employee(name, age, gender){
         setLevel(level);
     }  
-    // Getter for level
-    Worker_Level getLevel() const;
+    
     // Setter for level
     void setLevel(Worker_Level level);
+
     // Getter for role
-    std::string getRole() const override;
+    Work_Type getRole() const override;
+    // Getter for level
+    Worker_Level getLevel() const;
+
+    // Input data
+    void inputData() override;
+
 };
 
 

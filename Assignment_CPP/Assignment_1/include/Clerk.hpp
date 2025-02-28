@@ -7,8 +7,8 @@ class Clerk : public Employee {
 private:
     std::string task;
 public:
-    // Constructor
-    Clerk(const std::string& name, uint8_t age, Gender gender, const std::string& task) : Employee(name, age, gender){
+
+    Clerk(const std::string& name = "DefaultName", uint8_t age = 17, Gender gender = Gender::Others, const std::string& task = "Default_task") : Employee(name, age, gender){
         setTask(task);
     }  
     // Getter for major
@@ -19,7 +19,7 @@ public:
 
 
     // Getter for role
-    std::string getRole() const override;
+    Work_Type getRole() const override;
     
     // Input data
     void inputData() override;

@@ -8,15 +8,19 @@ private:
     std::string major;
 public:
     // Constructor
-    Engineer(const std::string& name, uint8_t age, Gender gender, const std::string& major) : Employee(name, age, gender){
+    Engineer(const std::string& name = "DefaultName", uint8_t age = 17, Gender gender = Gender::Others, const std::string& major = "Default_major") : Employee(name, age, gender){
         setMajor(major);
     }  
     // Getter for major
     std::string getMajor() const;
+    // Getter for role
+    Work_Type getRole() const override;
+
     // Setter for major
     void setMajor(const std::string& major);
-    // Getter for role
-    std::string getRole() const override;
+
+    // Input data
+    void inputData() override;
 };
 
 

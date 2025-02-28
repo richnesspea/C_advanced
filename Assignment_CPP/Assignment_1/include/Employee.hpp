@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <vector>
 
 enum Gender{
     Male,
@@ -11,6 +12,11 @@ enum Gender{
     Others,
 };
 
+enum Work_Type{
+    Engineer_work,
+    Clerk_work,
+    Worker_work,
+};
 
 class Employee{
 private:
@@ -36,27 +42,23 @@ public:
 
     // Setter for name
     void setName(const std::string& name);
+        
     // Setter for age
     void setAge(uint8_t age);
     // Setter for gender
     void setGender(Gender gender);
-    void setGender(const std::string &gender);
+
 
     // Pure virtual function
     // Getter for role
-    virtual std::string getRole() const = 0;
+    virtual Work_Type getRole() const = 0;
     virtual void inputData() = 0;
 
 
-    // << overloading as enum is not default with << operator, using operator overloading and friend function
-    // friend std::ostream& operator<<(std::ostream& COUT, Gender gender);
-    // friend std::ostream& operator<<(std::ostream& COUT, uint8_t int8_var);
     
 };
 
-std::ostream& operator<<(std::ostream& COUT, Gender gender);
-std::ostream& operator<<(std::ostream& COUT, uint8_t int8_var);
-std::ostream& operator>>(std::ostream& CIN, Gender gender);
+
 
 
 #endif

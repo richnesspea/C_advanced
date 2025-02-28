@@ -30,44 +30,5 @@ void Employee::setGender(Gender gender) {
     this-> gender = gender;    
 }
 
-void Employee::setGender(const std::string &gender){
-    std::cout << "Enter: (Male)/ (Female)/ (Others)" << std::endl;
-    if(gender == "Male"){
-        this -> gender = Gender::Male;
-        return;
-    }
-    if(gender == "Female"){
-        this -> gender = Gender::Female;
-        return;
-    }
-    if(gender == "Others"){
-        this -> gender = Gender::Others;
-        return;
-    }
-}
-
-
-
-std::ostream& operator<<(std::ostream& COUT, Gender gender){
-    switch(gender){
-        case Gender::Male: 
-            COUT << "Male"; 
-            break;
-        case Gender::Female: 
-            COUT << "Female"; 
-            break;
-        case Gender::Others: 
-            COUT << "Others"; 
-            break;
-    }   
-    return COUT;
-}
-
-
-
-std::ostream& operator<<(std::ostream& COUT, uint8_t int8_var){
-    COUT << static_cast<int>(int8_var);
-    return COUT;
-}
 
 

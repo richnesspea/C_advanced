@@ -1,5 +1,5 @@
 #include "Clerk.hpp"
-
+#include "Employee_loop.hpp"
 // Getter for major
 std::string Clerk::getTask() const{return this->task;}
 
@@ -9,14 +9,14 @@ void Clerk::setTask(const std::string& task){
     this -> task = task;
 }
 
-std::string Clerk::getRole() const {
-    return "Clerk";
+Work_Type Clerk::getRole() const {
+    return Work_Type::Clerk_work;
 }
 
 void Clerk::inputData(){
     std::string name;
     uint8_t age;
-    std::string gender;
+    Gender gender;
     std::string task;
 
     std::cout << "Enter the name for Clerk" << std::endl;
@@ -29,10 +29,10 @@ void Clerk::inputData(){
     
     std::cout << "Enter the gender for Clerk" << std::endl;
     std::cin >> gender;
-    setGender(name);
+    setGender(gender);
 
-    std::cout << "Enter the name for Clerk" << std::endl;
-    std::cin >> name;
-    setName(name);
+    std::cout << "Enter the task for Clerk" << std::endl;
+    std::cin >> task;
+    setTask(task);
 
 }
