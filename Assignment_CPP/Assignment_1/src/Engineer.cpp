@@ -7,3 +7,6 @@ void Engineer::setMajor(const std::string& major){
     this -> major = major;
 }
 
+std::string Engineer::getRole() const {
+    return "Engineer";
+}

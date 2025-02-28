@@ -13,8 +13,16 @@ public:
     }  
     // Getter for major
     std::string getTask() const;
+
     // Setter for major
     void setTask(const std::string& task);
+
+
+    // Getter for role
+    std::string getRole() const override;
+    
+    // Input data
+    void inputData() override;
 };
 
 

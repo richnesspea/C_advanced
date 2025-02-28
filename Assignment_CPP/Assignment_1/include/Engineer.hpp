@@ -15,6 +15,8 @@ public:
     std::string getMajor() const;
     // Setter for major
     void setMajor(const std::string& major);
+    // Getter for role
+    std::string getRole() const override;
 };
 
 

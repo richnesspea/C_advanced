@@ -1,9 +1,15 @@
-#include "Employee.hpp"
+#include "Engineer.hpp"
+#include "Worker.hpp"
+#include "Clerk.hpp"
+#include "Employee_manager.hpp"
+
 
 int main(){
-    //Employee(const std::string& name, uint8_t age, Gender gender)
-    Employee employee1("DoQuangLong", 23, Gender::Male);
-    std::cout << employee1.getName() << std::endl;
-    std::cout << employee1.getAge() << std::endl;
-    std::cout << employee1.getGender() << std::endl;
+    // Clerk clerk1("DangThiHoa", 23, Gender::Female, "Logistics");
+    // std::cout << clerk1.getName() << std::endl;
+    // std::cout << clerk1.getAge() << std::endl;
+    // std::cout << clerk1.getGender() << std::endl;
+    Employee_Manager();
+        
 }
+

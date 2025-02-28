@@ -40,7 +40,23 @@ public:
     void setAge(uint8_t age);
     // Setter for gender
     void setGender(Gender gender);
+    void setGender(const std::string &gender);
+
+    // Pure virtual function
+    // Getter for role
+    virtual std::string getRole() const = 0;
+    virtual void inputData() = 0;
+
+
+    // << overloading as enum is not default with << operator, using operator overloading and friend function
+    // friend std::ostream& operator<<(std::ostream& COUT, Gender gender);
+    // friend std::ostream& operator<<(std::ostream& COUT, uint8_t int8_var);
+    
 };
+
+std::ostream& operator<<(std::ostream& COUT, Gender gender);
+std::ostream& operator<<(std::ostream& COUT, uint8_t int8_var);
+std::ostream& operator>>(std::ostream& CIN, Gender gender);
 
 
 #endif

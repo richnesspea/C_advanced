@@ -28,6 +28,8 @@ public:
     Worker_Level getLevel() const;
     // Setter for level
     void setLevel(Worker_Level level);
+    // Getter for role
+    std::string getRole() const override;
 };
 
 
