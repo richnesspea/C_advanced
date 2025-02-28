@@ -9,7 +9,7 @@
 
 template <typename Key, //Represent the key in the map
           typename T, //Represent the value associated with the key
-          typename Hash = std::hash<Key>, //Hash functionfor type Key
+          typename Hash = std::hash<Key>, //Hash function for type Key
           typename Pred = std::equal_to<Key>, //This defines how keys are compared for equality
           typename Alloc = std::allocator<std::pair<const Key, T>>> //standared dynamic memory allocation
 class unordered_map{
