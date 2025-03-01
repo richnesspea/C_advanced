@@ -26,6 +26,7 @@ void Clerk::inputData(){
     std::cout << "Enter the age for Clerk" << std::endl;
     std::cin >> age;
     setAge(age);
+
     
     std::cout << "Enter the gender for Clerk" << std::endl;
     std::cin >> gender;

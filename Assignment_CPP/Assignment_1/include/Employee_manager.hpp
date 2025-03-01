@@ -12,10 +12,8 @@ private:
 
 public:
     static void Add_Employee(std::vector<Employee*>& vec);
-    void Sort_By_Name(const std::string &name);
-    void Print_Employees();
-    void Exit_program();
-
+    static void Search_Name(std::vector<Employee*>& vec);
+    static void Print_Employees(std::vector<Employee*> &vec);
 
 };
 
