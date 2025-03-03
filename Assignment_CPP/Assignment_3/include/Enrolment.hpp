@@ -3,9 +3,15 @@
 
 #include "Student.hpp"
 
-class Enrolment : public Student {
+class Enrolment{
+private:
+    std::vector<Student*> vec;
 public:
-    
+    void addStudent(void);
+    void printStudents(void) const;
+    void searchID(void) const;
+    void exitProgram(bool &flag);
+
 };
 
 

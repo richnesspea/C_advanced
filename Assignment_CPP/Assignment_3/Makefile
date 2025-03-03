@@ -8,7 +8,7 @@ BUILD_DIR := build
 BIN_DIR := bin
 
 # Executable name
-TARGET := $(BIN_DIR)/Assignment_1
+TARGET := $(BIN_DIR)/Assignment_3
 
 # Find all .cpp files in SRC_DIR
 SRCS := $(wildcard $(SRC_DIR)/*.cpp)
