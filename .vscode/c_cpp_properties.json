@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/Assignment_CPP/Assignment_3/include"
+                "${workspaceFolder}/Assignment_CPP/Assignment_3/include",
+                "${workspaceFolder}/Assignment_CPP/Assignment_4/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
