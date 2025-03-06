@@ -14,8 +14,12 @@ private:
 public:
     // Service functions
     void addEmployee();
+    void modifyEmployeeByID(void);
+    void deleteEmployeeByID(void);
+
     void printEmployees(void) const;
-    void searchEmployeeByID(void) const;
+    void printByEmployee_type(void) const;
+    
 };
 
 #endif

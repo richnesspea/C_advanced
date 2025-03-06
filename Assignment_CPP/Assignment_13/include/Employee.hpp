@@ -8,11 +8,12 @@
 #include "Date.hpp"
 #include "Certificate.hpp"
 
+
 enum Employee_type
 {
-    Experience,
-    Fresher,
-    Intern,
+    Experience_employee,
+    Fresher_employee,
+    Intern_employee,
 };
 
 class Employee
@@ -32,6 +33,7 @@ public:
     // Constructor
     Employee(const std::string &id, const std::string &fullname, const Day &day, const std::string &phone, const std::string &email, Employee_type employee_type);
     // We don't need copy and move constructor because std::string have its own default ones.
+    virtual ~Employee() = default;
 
     // Getter
     std::string getID() const;
@@ -44,7 +46,7 @@ public:
 
     // Setter
     void setID(const std::string &id);
-    void setName(const std::string &name);
+    void setName(const std::string &fullname);
     void setDay(const Day &day);
     void setPhone(const std::string &phone);
     void setEmail(const std::string &email);
@@ -58,7 +60,7 @@ public:
     void searchCertificate(const std::string &certificateID);
 
     // virtual function
-    virtual void showMe();
+    virtual void showMe() = 0;
 };
 
 #endif

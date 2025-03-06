@@ -19,7 +19,7 @@ private:
     Day certificateDate;
 public:
     // Constructor
-    Certificate(const std::string &certificateID, const std::string &certificateName, Rank certificateRank, const Day &certificateDate);
+    Certificate(const std::string &certificateID, const std::string &certificateName, Rank certificateRank, Day certificateDate);
 
     // Getter
     std::string getCertificateID() const;

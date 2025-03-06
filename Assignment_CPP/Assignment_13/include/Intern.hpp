@@ -12,18 +12,10 @@ private:
 
 public:
     // Employee(const std::string &id, const std::string &fullname, const Day &day, const std::string &phone, const std::string &email, Employee_type employee_type);
-    // Intern(const std::string &id, const std::string &fullname, const Day &day, const std::string &phone, const std::string &email,
-    //        Employee_type employee_type, const std::string &majors, const std::string &semester, const std::string &university_name);
-
     Intern(const std::string &id, const std::string &fullname, const Day &day, const std::string &phone, const std::string &email,
-           Employee_type employee_type, const std::string &majors, const std::string &semester, const std::string &university_name) 
-           : Employee(id, fullname, day, phone, email, employee_type)
-    {
-        setMajors(majors);
-        setSemester(semester);
-        setUniversity_name(university_name);
-    };
+           Employee_type employee_type, const std::string &majors, const std::string &semester, const std::string &university_name);
 
+    
     std::string getMajors() const;
     std::string getSemester() const;
     std::string getUniversity_name() const;
@@ -31,6 +23,8 @@ public:
     void setMajors(const std::string &majors);
     void setSemester(const std::string &semester);
     void setUniversity_name(const std::string &University_name);
+
+    void showMe();
 };
 
 #endif
