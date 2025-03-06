@@ -30,14 +30,25 @@ void Street::addPerson(void)
         return;
     }
 
-    for (const auto &i : u_map)
-    {
-        for (Person *ptr : i.second->getMembers())
-        {
-            if (ptr->getID() == id)
-            {
+
+    //i is a reference to each element of std::unordered_map (reference to std::pair object)
+    // for (const auto &i : u_map)
+    // {
+    //     for (Person *ptr : i.second->getMembers())
+    //     {
+    //         if (ptr->getID() == id)
+    //         {
+    //             std::cout << "The ID: " << id << " already exists!" << std::endl;
+    //             return; 
+    //         }
+    //     }
+    // }
+
+    for(auto i = u_map.begin(); i != u_map.end(); i++){
+        for(Person *ptr : i->second->getMembers()){
+            if(ptr->getID() == id){
                 std::cout << "The ID: " << id << " already exists!" << std::endl;
-                return; 
+                return;
             }
         }
     }

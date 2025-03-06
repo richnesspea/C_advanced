@@ -79,5 +79,6 @@
         "semaphore": "cpp",
         "stop_token": "cpp",
         "*.tpp": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

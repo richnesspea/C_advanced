@@ -19,7 +19,7 @@ public:
 ostream& operator<<(ostream& COUT, const Base& obj) {
     COUT << "the value that ptr2 points to is " << obj.x << endl;
     return COUT;
-}
+}   
 
 int main() {
     int *ptr = new int;
