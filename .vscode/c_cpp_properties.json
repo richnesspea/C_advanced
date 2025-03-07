@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/Assignment_CPP/Assignment_3/include",
                 "${workspaceFolder}/Assignment_CPP/Assignment_4/include",
-                "${workspaceFolder}/Assignment_CPP/Assignment_13/include"
+                "${workspaceFolder}/Assignment_CPP/Assignment_13/include",
+                "${workspaceFolder}/Assignment_CPP/Assignment_14/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
